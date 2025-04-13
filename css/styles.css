@@ -1,11 +1,31 @@
-/* base styles */
-.nav-list:hover,
-.nav-list:focus {
-  color: #404bbf;
+/* colors */
+:root {
+  --primary-brand: #4d5ae5;
+  --pressed-state: #404bbf;
+  --overlays: #2e2f42;
+  --success: #31d0aa;
+  --body-text: #434455;
+  --light-slate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --modal-overlay: #2e2f42;
+  --hero-background: #2e2f42;
+  --color-background: #ffffff;
+  --modal-background: #fcfcfc;
 }
-.info-list:hover,
-.info-list:focus {
-  color: #404bbf;
+/* base reset */
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
 }
 
 a {
@@ -16,10 +36,17 @@ ul {
   list-style-type: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* base styles */
 body {
   font-family: "Roboto", sans-serif;
-  color: #434455;
-  background-color: #ffffff;
+  color: var(--body-text);
+  background-color: var(--color-background);
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
@@ -27,7 +54,31 @@ body {
   letter-spacing: 0.02em;
 }
 
+.nav-list:hover,
+.nav-list:focus {
+  color: var(--pressed-state);
+}
+.info-list:hover,
+.info-list:focus {
+  color: var(--pressed-state);
+}
+
+.container {
+  width: 1158px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+margin-bottom: 120px;
+
 /* main styles */
+.nav-container {
+  display: flex;
+  justify-center: space-between;
+}
+
 .logo-part {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -35,11 +86,12 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #4d5ae5;
+  color: var(--primary-brand);
+  padding: 24px 76px 24px 0;
 }
 
 .logo-name {
-  color: #2e2f42;
+  color: var(--hero-background);
 }
 
 .nav-list {
@@ -47,7 +99,19 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  color: var(--modal-overlay);
+}
+.container-nav-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.container-info-list {
+  display: flex;
+  gap: 40px;
 }
 
 .post-info-list {
@@ -60,7 +124,7 @@ body {
 
 /* section 1 */
 .main-page {
-  background: #2e2f42;
+  background: var(--hero-background);
 }
 
 .page-title {
@@ -69,7 +133,7 @@ body {
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #ffffff;
+  color: var(--color-background);
 }
 
 .button {
@@ -77,17 +141,17 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #ffffff;
-  background: #4d5ae5;
+  color: var(--color-background);
+  background: var(--primary-brand);
   cursor: pointer;
 }
 
 .button:hover,
 .button:focus {
-  background-color: #404bbf;
+  background-color: var(--pressed-state);
 }
 
-/* section 2 */
+/* section 2 main feature*/
 .title-list {
   font-weight: 700;
   font-size: 36px;
@@ -95,7 +159,7 @@ body {
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
-  color: #2e2f42;
+  color: var(--hero-background);
 }
 
 .title {
@@ -103,7 +167,7 @@ body {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  color: var(--overlays);
 }
 
 .title-text {
@@ -111,17 +175,22 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--body-text);
 }
 
 /* section 3 team */
 .feature-page {
-  background-color: #f4f4fd;
+  background-color: var(--cloud);
   text-align: center;
 }
 
 .feature-team {
-  background-color: #ffffff;
+  background-color: var(--color-background);
+}
+
+.containt-teem-list {
+  display: flex;
+  justify-content: center;
 }
 
 /* section 4 portfolio */
@@ -131,15 +200,20 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #434455;
+  color: var(--body-text);
+}
+
+.container-portfolio-list {
+  display: flex;
+  justify-content: center;
 }
 
 /* footer */
 .footer-page {
-  background: #2e2f42;
+  background: var(--hero-background);
 }
 
 .logo-name-footer,
 .text-footer-page {
-  color: #f4f4fd;
+  color: var(--cloud);
 }
