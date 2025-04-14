@@ -63,6 +63,10 @@ body {
   color: var(--pressed-state);
 }
 
+.header {
+  border-bottom: 1px solid var(--cornflower);
+}
+
 .heder-conteiner {
   display: flex;
   justify-content: space-between;
@@ -82,7 +86,7 @@ body {
   align-items: center;
 }
 
-.logo-part {
+.header-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -104,6 +108,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--modal-overlay);
+  padding: 24px 0;
 }
 .container-nav-list {
   display: flex;
@@ -134,18 +139,21 @@ body {
 }
 
 /* section 1 */
-.main-page {
+.main-banner {
   background: var(--hero-background);
 }
 
-.page-title {
+.container-banner {
+  padding: 188px 0;
+}
+
+.banner-title {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--color-background);
-  padding: 188px 0;
   max-width: 496px;
 }
 
@@ -170,8 +178,7 @@ body {
 }
 
 /* section 2 main feature*/
-
-.container-feature {
+.feature-page {
   padding: 120px 0;
 }
 
@@ -187,6 +194,17 @@ body {
 }
 
 .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container-feature-list {
@@ -239,9 +257,11 @@ body {
 .container-team-title {
   border-radius: 0px 0px 4px 4px;
   padding: 32px 0;
+  border: 1px solid var(--cornflower);
 }
 
 /* section 4 portfolio */
+
 .portfolio-page {
   padding: 120px 0 120px 0;
 }
@@ -280,18 +300,25 @@ body {
 
 .footer-container {
   padding: 100px 0;
+}
+
+.footer-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-brand);
+  margin-bottom: 16px;
   display: inline-block;
 }
 
-.logo-part {
-  margin-bottom: 16px;
-}
-
-.logo-name-footer,
-.text-footer-page {
+.footer-logo-name,
+.footer-page-text {
   color: var(--cloud);
 }
 
-.text-footer-page {
+.footer-page-text {
   max-width: 264px;
 }
