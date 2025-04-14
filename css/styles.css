@@ -293,9 +293,6 @@ body {
 /* footer */
 .footer-page {
   background: var(--hero-background);
-}
-
-.footer-container {
   padding: 100px 0;
 }
 
